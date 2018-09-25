@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  window.dancers = [];
+  window.bananaDancers = [];
+  window.poopDancers = [];
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -23,11 +24,26 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $(".dancerSpace").height() * Math.random(),
-      $(".dancerSpace").width() * Math.random(),
+      $(".danceFloor").height() * Math.random() * 0.475,
+      $(".danceFloor").width() * Math.random() * 0.9,
       Math.random() * 1000
     );
-    $('.dancerSpace').append(dancer.$node);
-  });
-}); 
 
+    $('.danceFloor').append(dancer.$node);
+    if ( dancer.$node = '<span class="banana"></span>') {
+      window.bananaDancers.push(dancer);
+    } else {
+      window.poopDancers.push(dancer);
+    }
+
+  });
+
+  $('.lineUpButton').on('click', function(event) {
+    debugger;
+    var leftPosition = 30;
+    for (var i = 0; i < window.bananaDancers.length; i++) {
+      window.bananaDancers[i].lineUp(leftPosition);
+      leftPosition += 60;
+    }
+  })
+});
