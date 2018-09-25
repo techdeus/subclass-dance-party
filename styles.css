@@ -1,32 +1,104 @@
-body, html{
-  height:100%;
+body, html {
+  height: 100%;
 }
-body{
+body {
   margin: 0px;
-  background-color:cornflowerblue;
+  background-color: HSL(200, 20%, 97.1%);
   font-size: 18px;
+  text-align: center;
 }
+
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
 .title, .addDancerButton{
   padding:5px 12px;
-  float:right;
+  float:center;
+  
 }
-.topbar{
-  height:32px;
-  background-color: #555;
+
+.topbar {
+  height: 32px;
+  background-color: #949494;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 25px;
+  text-align: center;
 }
+
 .title{
   background-color: #777;
 }
 .dancer{
-  border:10px solid white;
+  border:10px solid red;
   border-radius:10px;
   position:relative;
 } 
+.danceFloor {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: grey;
+  background-image: url("images/background.png");
+  z-index: -5; 
+}
+.danceSpace {
+  z-index: 1;
+  /*height: 75%;
+  width: 25%;*/
+}
 
-.giphy{
-  z-index: -1;
+#sportsDancer {
+background-image: url("images/sports/sports.png");
+}
 
+#poopDancer {
+background-image: url("images/poop/poop.png");
+}
+
+#robotDancer {
+background-image: url("images/robots/robots.png");
+}
+
+h1 {
+  font: 4em Helvetica;
+  color: white;
+  -webkit-animation: disco 3s infinite;
+  width: 600px;
+  height: 10px;
+  margin-bottom: : 40px;
+  display: inline-block;
+}
+
+@-webkit-keyframes disco {
+  0% {
+    text-shadow: -5px -5px #FF0016;
+  }
+  5% {
+    text-shadow: -5px -5px #FF0016, 10px 10px #FEF450;
+  }
+  10% {
+    text-shadow: -5px -5px #FF0016, 10px 10px #FEF450, -15px -15px #FF0CF6;
+  }
+  15% {
+    text-shadow: -5px -5px #FF0016, 10px 10px #FEF450, -15px -15px #FF0CF6, 20px 20px #B314F5;
+  }
+  20% {
+    text-shadow: -5px -5px #FF0016, 10px 10px #FEF450, -15px -15px #FF0CF6, 20px 20px #B314F5, -25px -25px #2D0887;
+  }
+  25% {
+    text-shadow: -5px -5px #FF0016, 10px 10px #FEF450, -15px -15px #FF0CF6, 20px 20px #B314F5, -25px -25px #2D0887, 30px 30px #FF0016;
+  }
+  30% {
+    text-shadow: -5px -5px #FF0016, 10px 10px #FEF450, -15px -15px #FF0CF6, 20px 20px #B314F5, -25px -25px #2D0887, 30px 30px #FF0016, -35px -35px #FEF450;
+  }
+  35% {
+    text-shadow: -5px -5px #FF0016, 10px 10px #FEF450, -15px -15px #FF0CF6, 20px 20px #B314F5, -25px -25px #2D0887, 30px 30px #FF0016, -35px -35px #FEF450, 40px 40px #FF0CF6;
+  }
+  40% {
+    text-shadow: -5px -5px #FF0016, 10px 10px #FEF450, -15px -15px #FF0CF6, 20px 20px #B314F5, -25px -25px #2D0887, 30px 30px #FF0016, -35px -35px #FEF450, 40px 40px #FF0CF6, -45px -45px #B314F5;
+  }
+  45% {
+    text-shadow: -5px -5px #FF0016, 10px 10px #FEF450, -15px -15px #FF0CF6, 20px 20px #B314F5, -25px -25px #2D0887, 30px 30px #FF0016, -35px -35px #FEF450, 40px 40px #FF0CF6, -45px -45px #B314F5, 50px 50px #2D0887;
+  }
 }
