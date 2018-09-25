@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:cornflowerblue;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,7 +21,12 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:10px solid white;
   border-radius:10px;
-  position:absolute;
+  position:relative;
+} 
+
+.giphy{
+  z-index: -1;
+
 }
