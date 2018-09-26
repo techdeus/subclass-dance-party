@@ -1,11 +1,13 @@
 body, html {
   height: 100%;
 }
+
 body {
   margin: 0px;
   background-color: HSL(200, 20%, 97.1%);
   font-size: 18px;
   text-align: center;
+  z-index: -2;
 }
 
 body, a:link, a:visited, a:active{
@@ -14,10 +16,22 @@ body, a:link, a:visited, a:active{
   font-size: 24px;
   text-transform: uppercase;
 }
+a:hover {
+color: black;
+}
+
 .title, .addDancerButton{
   padding:5px 12px;
   float:center;
-  
+}
+
+.robot1 {
+  position: absolute;
+  display: block;
+}
+
+.robot1:hover {
+    transform: scale(2);
 }
 
 .topbar {
@@ -46,22 +60,11 @@ body, a:link, a:visited, a:active{
   z-index: -5; 
 }
 .danceSpace {
-  z-index: 1;
   /*height: 75%;
   width: 25%;*/
 }
 
-#sportsDancer {
-background-image: url("images/sports/sports.png");
-}
 
-#poopDancer {
-background-image: url("images/poop/poop.png");
-}
-
-#robotDancer {
-background-image: url("images/robots/robots.png");
-}
 
 h1 {
   font: 4em Helvetica;
@@ -107,11 +110,11 @@ h1 {
 }
 
 
-span:before, span:after {
+/*span:before, span:after {
   content: '';
   display: block;
   width: 5px;height: 5px;
-}
+}*/
 
 @keyframes poop-dance {
   from, 49% { transform-origin: -50% 100%; }
@@ -127,7 +130,16 @@ span:before, span:after {
 
 .poop {
   position: absolute;
-  display: inline-block;
+  display: block;
+  z-index: 5;
+}
+
+.poop:hover {
+    transform: scale(3);
+}
+
+.banana:hover {
+    transform: scale(3);
 }
 
 .banana {

@@ -1,6 +1,7 @@
 $(document).ready(function() {
   window.bananaDancers = [];
   window.poopDancers = [];
+  window.robotDancers = [];
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -30,20 +31,35 @@ $(document).ready(function() {
     );
 
     $('.danceFloor').append(dancer.$node);
-    if ( dancer.$node = '<span class="banana"></span>') {
+    
+    if ( this.id === 'bananaDancer') {
       window.bananaDancers.push(dancer);
-    } else {
+    } else if (this.id ==='poopDancer') {
       window.poopDancers.push(dancer);
+    } else {
+      window.robotDancers.push(dancer);
     }
 
   });
 
   $('.lineUpButton').on('click', function(event) {
-    debugger;
     var leftPosition = 30;
     for (var i = 0; i < window.bananaDancers.length; i++) {
-      window.bananaDancers[i].lineUp(leftPosition);
+      window.bananaDancers[i].lineUp(leftPosition, 50);
       leftPosition += 60;
     }
-  })
+    var rightPosition = 30;
+    for (var i = 0; i < window.poopDancers.length; i++) {
+      window.poopDancers[i].lineUp(rightPosition, 500);
+      rightPosition += 60;
+    }
+    var middlePosition = 30;
+    for (var i = 0; i < window.robotDancers.length; i++) {
+      window.robotDancers[i].lineUp(middlePosition, 300);
+      middlePosition += 60;
+    }
+  });
+  
+  
+
 });

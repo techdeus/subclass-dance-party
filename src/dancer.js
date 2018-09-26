@@ -3,9 +3,12 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
+  if (!this.$node){
+    this.$node = $('<span class="dancer"></span>');
+  }
   //this.$node = $('<span class="dancer"></span>');
   this.step();
-  this.setPosition(top, left, this.randNum);
+  this.setPosition(top, left);
 }
 
 Dancer.prototype.step = function() {
@@ -15,19 +18,16 @@ Dancer.prototype.step = function() {
 };
 
 Dancer.prototype.setPosition = function(top, left) {
-
-  this.$node.css('top',top);
-  this.$node.css('left',left);
-
+  this.$node.css('top', top);
+  this.$node.css('left', left);
 };
 
-Dancer.prototype.lineUp = function(leftPosition,topSpec) {
+Dancer.prototype.lineUp = function(leftPosition, topSpec) {
   //this.$node.css('position','absolute');
   this.$node.css('top', topSpec);
   this.$node.css('left', leftPosition);
 }
 
-//makeDancer.prototype.$node = $('<span class="dancer"></span>');
 
 
 

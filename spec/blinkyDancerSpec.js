@@ -1,3 +1,62 @@
+describe('robotDancer', function() {
+  
+  var robotDancer, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    robotDancer = new RobotDancer(10, 20, timeBetweenSteps);
+  });
+
+  it('should have a jQuery $node object', function() {
+    expect(robotDancer.$node).to.be.an.instanceof(jQuery);
+  });
+  
+  it('should be an instance of the Dancer Superclass', function() {
+    expect(robotDancer).to.be.an.instanceof(Dancer);
+  });
+});
+
+
+
+describe('poopDancer', function() {
+  
+  var poopDancer, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    poopDancer = new PoopDancer(10, 20, timeBetweenSteps);
+  });
+
+  it('should have a jQuery $node object', function() {
+    expect(poopDancer.$node).to.be.an.instanceof(jQuery);
+  });
+  
+  it('should be an instance of the Dancer Superclass', function() {
+    expect(poopDancer).to.be.an.instanceof(Dancer);
+  });
+});
+
+describe('bananaDancer', function() {
+  
+  var bananaDancer, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    bananaDancer = new BananaDancer(10, 20, timeBetweenSteps);
+  });
+
+  it('should have a jQuery $node object', function() {
+    expect(bananaDancer.$node).to.be.an.instanceof(jQuery);
+  });
+  
+  it('should be an instance of the Dancer Superclass', function() {
+    expect(bananaDancer).to.be.an.instanceof(Dancer);
+  });
+});
+
 describe('blinkyDancer', function() {
 
   var blinkyDancer, clock;
